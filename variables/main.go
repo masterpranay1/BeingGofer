@@ -19,4 +19,7 @@ func main() {
 	// Alias
 	aliasName := "John"
 	fmt.Println(aliasName)
+
+	a, b := 10, 20 // multiple assignment
+	fmt.Println(a, b)
 }
