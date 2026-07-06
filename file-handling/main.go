@@ -21,5 +21,18 @@ func main() {
 	}
 
 	fmt.Println(length)
-	file.Close()
+	defer file.Close()
+
+	readFile("./filename.txt")
+}
+
+func readFile(filename string) {
+	databyte, err := os.ReadFile(filename)
+	// databyte will not be a string type
+
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("Text inside file is", string(databyte))
 }
